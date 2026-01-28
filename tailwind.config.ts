@@ -73,7 +73,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        display: ['Sora', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
