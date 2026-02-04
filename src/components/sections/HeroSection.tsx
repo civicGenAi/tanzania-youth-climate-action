@@ -74,7 +74,7 @@ const HeroSection = () => {
         <div className="max-w-4xl">
           {/* Main Heading */}
           <motion.h1
-            className="heading-hero text-foreground mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -83,7 +83,7 @@ const HeroSection = () => {
             <span className="text-primary relative">
               Action
               <motion.span
-                className="absolute -bottom-2 left-0 h-1 bg-primary rounded-full"
+                className="absolute -bottom-1 left-0 h-0.5 bg-primary rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -91,16 +91,6 @@ const HeroSection = () => {
             </span>{" "}
             for Tanzania
           </motion.h1>
-
-          {/* Subheading */}
-          <motion.p
-            className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            A youth-led environmental conservation and climate action platform supported by the President's Office of Tanzania.
-          </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
