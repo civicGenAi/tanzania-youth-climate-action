@@ -1,4 +1,4 @@
-import { UserPlus, Heart, Building, Mail, ArrowRight, Send } from "lucide-react";
+import { UserPlus, Heart, Building, Mail, ArrowRight, Send, HandHeart } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -46,6 +46,9 @@ const Involved = () => {
         title="Get Involved"
         description="Every action matters. Choose how you want to contribute to environmental conservation and join Tanzania's movement for positive change."
         badge="Take Action"
+        badgeIcon={HandHeart}
+        backgroundImage="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920&h=1080&fit=crop"
+        theme="action"
       />
 
       {/* Action Cards */}

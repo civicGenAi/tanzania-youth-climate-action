@@ -1,4 +1,4 @@
-import { Calendar, ArrowRight, Tag, Clock } from "lucide-react";
+import { Calendar, ArrowRight, Tag, Clock, Newspaper } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -10,7 +10,7 @@ const featuredStory = {
   excerpt: "From a small village in Mwanza, 22-year-old Amina mobilized 200 youth volunteers to plant over 5,000 trees in just three months. Her story is an inspiration to youth across Tanzania.",
   date: "January 20, 2026",
   readTime: "5 min read",
-  image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&h=600&fit=crop",
+  image: "https://images.unsplash.com/photo-544027993-37dbfe43562a?w=1200&h=600&fit=crop",
 };
 
 const newsItems = [
@@ -73,6 +73,9 @@ const News = () => {
         title="News & Stories"
         description="Stay updated with the latest from our youth network, environmental campaigns, and community success stories."
         badge="Latest Updates"
+        badgeIcon={Newspaper}
+        backgroundImage="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1920&h=1080&fit=crop"
+        theme="news"
       />
 
       {/* Featured Story */}

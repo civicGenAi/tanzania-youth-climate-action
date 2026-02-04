@@ -48,6 +48,9 @@ const Partners = () => {
         title="Our Partners"
         description="Together with our trusted partners, we amplify our impact and reach more communities across Tanzania."
         badge="Collaboration"
+        badgeIcon={Handshake}
+        backgroundImage="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&h=1080&fit=crop"
+        theme="collaboration"
       />
 
       {/* Partner Categories */}

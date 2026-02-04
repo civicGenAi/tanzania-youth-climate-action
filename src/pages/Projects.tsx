@@ -1,4 +1,4 @@
-import { MapPin, Calendar, CheckCircle2, Clock, ArrowRight } from "lucide-react";
+import { MapPin, Calendar, CheckCircle2, Clock, ArrowRight, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -68,6 +68,9 @@ const Projects = () => {
         title="Our Projects"
         description="Real stories of environmental impact driven by youth across Tanzania. Every project represents communities coming together for positive change."
         badge="Impact Stories"
+        badgeIcon={Rocket}
+        backgroundImage="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1920&h=1080&fit=crop"
+        theme="action"
       />
 
       {/* Projects Grid */}
