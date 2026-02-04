@@ -24,18 +24,9 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 gradient-mesh" />
         
-        {/* Mobile: Single floating image */}
+        {/* Floating images */}
         <motion.div
-          className="absolute top-24 right-4 w-32 h-24 rounded-xl overflow-hidden shadow-xl opacity-40 lg:hidden"
-          animate={{ y: [0, -15, 0], rotate: [0, 2, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <img src={heroImages[0]} alt="" className="w-full h-full object-cover" />
-        </motion.div>
-        
-        {/* Desktop: Multiple floating images */}
-        <motion.div
-          className="hidden lg:block absolute top-20 right-10 w-64 h-48 rounded-2xl overflow-hidden shadow-2xl opacity-60"
+          className="absolute top-20 right-10 w-64 h-48 rounded-2xl overflow-hidden shadow-2xl opacity-60"
           animate={{ y: [0, -20, 0], rotate: [0, 2, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -43,7 +34,7 @@ const HeroSection = () => {
         </motion.div>
         
         <motion.div
-          className="hidden lg:block absolute top-1/3 right-1/4 w-48 h-36 rounded-2xl overflow-hidden shadow-2xl opacity-50"
+          className="absolute top-1/3 right-1/4 w-48 h-36 rounded-2xl overflow-hidden shadow-2xl opacity-50"
           animate={{ y: [0, 15, 0], rotate: [0, -2, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         >
@@ -51,7 +42,7 @@ const HeroSection = () => {
         </motion.div>
         
         <motion.div
-          className="hidden lg:block absolute bottom-1/4 right-20 w-56 h-40 rounded-2xl overflow-hidden shadow-2xl opacity-40"
+          className="absolute bottom-1/4 right-20 w-56 h-40 rounded-2xl overflow-hidden shadow-2xl opacity-40"
           animate={{ y: [0, -15, 0], rotate: [0, 1, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         >
@@ -59,86 +50,70 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          className="hidden lg:block absolute top-2/3 left-10 w-40 h-32 rounded-2xl overflow-hidden shadow-2xl opacity-30"
+          className="absolute top-2/3 left-10 w-40 h-32 rounded-2xl overflow-hidden shadow-2xl opacity-30 hidden lg:block"
           animate={{ y: [0, 10, 0], rotate: [0, -1, 0] }}
           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         >
           <img src={heroImages[3]} alt="" className="w-full h-full object-cover" />
         </motion.div>
 
-        {/* Decorative circles - adjusted for mobile */}
+        {/* Decorative circles */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 lg:w-96 lg:h-96 rounded-full bg-primary/5 blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/3 w-48 h-48 lg:w-64 lg:h-64 rounded-full bg-accent/30 blur-3xl"
+          className="absolute bottom-1/4 right-1/3 w-64 h-64 rounded-full bg-accent/30 blur-3xl"
           animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
       </div>
 
-      <div className="container-main relative z-10 pt-32 pb-16 lg:pt-24 lg:pb-12">
+      <div className="container-main relative z-10 pt-24 pb-12">
         <div className="max-w-4xl">
           {/* Main Heading */}
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 lg:mb-10 leading-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Youth-Led{" "}
-            <span className="block mt-2 lg:inline lg:mt-0">
-              Environmental{" "}
-            </span>
-            <span className="text-primary relative inline-block">
+            Youth-Led Environmental{" "}
+            <span className="text-primary relative">
               Action
               <motion.span
-                className="absolute -bottom-1 left-0 h-1 bg-primary rounded-full"
+                className="absolute -bottom-1 left-0 h-0.5 bg-primary rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               />
             </span>{" "}
-            <span className="block mt-2 lg:inline lg:mt-0">
-              for Tanzania
-            </span>
+            for Tanzania
           </motion.h1>
-
-          {/* Subtitle for mobile */}
-          <motion.p
-            className="text-base lg:text-lg text-muted-foreground mb-10 lg:hidden max-w-md"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Empowering youth to lead climate action and environmental conservation across Tanzania
-          </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-16"
+            className="flex flex-col sm:flex-row gap-4 mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Button variant="hero" size="xl" asChild className="w-full sm:w-auto">
+            <Button variant="hero" size="xl" asChild>
               <Link to="/youth">
                 Join the Network
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild className="w-full sm:w-auto">
+            <Button variant="heroOutline" size="xl" asChild>
               <Link to="/projects">
                 View Projects
               </Link>
             </Button>
           </motion.div>
 
-          {/* Focus Areas - Hidden on mobile, shown on desktop */}
+          {/* Focus Areas */}
           <motion.div
-            className="hidden lg:block"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -165,29 +140,12 @@ const HeroSection = () => {
               ))}
             </div>
           </motion.div>
-
-          {/* Mobile: Simple stats or badges */}
-          <motion.div
-            className="flex gap-6 lg:hidden"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium text-muted-foreground">Climate Action</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
-              <span className="text-sm font-medium text-muted-foreground">Youth Network</span>
-            </div>
-          </motion.div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
