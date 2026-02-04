@@ -1,4 +1,4 @@
-import { Target, Eye, Building2, Users, Heart, Globe, CheckCircle2 } from "lucide-react";
+import { Target, Eye, Building2, Users, Heart, Globe, CheckCircle2, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -31,6 +31,9 @@ const About = () => {
         title="About Us"
         description="Understanding who we are, what drives us, and who supports our mission for environmental conservation across Tanzania."
         badge="Our Story"
+        badgeIcon={BookOpen}
+        backgroundImage="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&h=1080&fit=crop"
+        theme="community"
       />
 
       {/* Who We Are */}

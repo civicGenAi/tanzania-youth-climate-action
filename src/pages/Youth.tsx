@@ -1,4 +1,4 @@
-import { Users, Award, MapPin, GraduationCap, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { Users, Award, MapPin, GraduationCap, ArrowRight, CheckCircle2, Sparkles, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -55,8 +55,11 @@ const Youth = () => {
         title="Youth Network"
         description="The Youth Network is the heart of Green Samia. Join Tanzania's largest youth environmental movement and become an agent of change."
         badge="Join the Movement"
+        badgeIcon={Zap}
+        backgroundImage="https://images.unsplash.com/photo-1529390079861-591f12320e81?w=1920&h=1080&fit=crop"
+        theme="youth"
       >
-        <Button variant="hero" size="xl" asChild>
+        <Button variant="hero" size="xl" className="bg-white text-primary hover:bg-white/90" asChild>
           <Link to="/involved">
             Become a Member
             <ArrowRight className="w-5 h-5" />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Globe, TreeDeciduous, Leaf, Trash2, ArrowRight, X } from "lucide-react";
+import { Globe, TreeDeciduous, Leaf, Trash2, ArrowRight, X, Focus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageLayout from "@/components/layout/PageLayout";
 import PageHeader from "@/components/ui/PageHeader";
@@ -50,6 +50,9 @@ const Work = () => {
         title="What We Work On"
         description="Our focus areas represent the critical environmental challenges facing Tanzania, addressed through youth-led action and community engagement."
         badge="Our Focus"
+        badgeIcon={Focus}
+        backgroundImage="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&h=1080&fit=crop"
+        theme="nature"
       />
 
       {/* Work Areas Grid */}
